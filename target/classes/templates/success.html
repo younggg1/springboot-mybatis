@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf模板页面</title>
+</head>
+<body>
+    <h1>Thymeleaf模板页面</h1>
+    <p th:text="${msg}">默认的字符串</p>
+    <div>
+        <spn>所有客户下拉框:</spn>
+        <select name="mycity">
+            <option th:each="customer : ${list}" th:text="${customer.customerName}"></option>
+        </select>
+    </div>
+</body>
+</html>
