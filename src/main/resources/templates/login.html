@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登录</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="login">
+    <h3 style="color: #ffffff"><img src="images/gongfanglogo.png" alt="" width="40px">销售管理决策系统</h3>
+    <form method="post" th:action="@{/login}">
+        <input class="user" type="text" name="loginName" placeholder="用户名" required="required">
+        <input class="pwd" type="password" name="password" placeholder="密码" required="required">
+        <div class="t-box" th:if="${msg}">
+            <img src="images/error.png" alt="" class="t-img">
+            <p class="t-color" th:text="${msg}"></p>
+        </div>
+        <button type="submit" class=" btn btn-primary btn-block btn-large">登录</button>
+    </form>
+
+</div>
+<!-- 引入公共js文件 -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+
+</script>
+
+
+</body>
+
+</html>

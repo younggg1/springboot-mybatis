@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jd.springboot02.mapper.LeadsMapper">
+
+    <resultMap id="BaseResultMap" type="com.jd.springboot02.entity.Leads">
+            <id property="leadsId" column="leads_id" jdbcType="INTEGER"/>
+            <result property="leadsName" column="leads_name" jdbcType="VARCHAR"/>
+            <result property="isTransform" column="is_transform" jdbcType="INTEGER"/>
+            <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+            <result property="followup" column="followup" jdbcType="INTEGER"/>
+            <result property="nextTime" column="next_time" jdbcType="TIMESTAMP"/>
+            <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+            <result property="contacts" column="contacts" jdbcType="VARCHAR"/>
+            <result property="mobile" column="mobile" jdbcType="VARCHAR"/>
+            <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        leads_id,leads_name,is_transform,
+        customer_id,followup,next_time,
+        customer_name,contacts,mobile,
+        telephone,address,remark,
+        create_time
+    </sql>
+</mapper>

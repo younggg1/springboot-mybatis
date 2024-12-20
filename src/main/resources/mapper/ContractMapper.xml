@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jd.springboot02.mapper.ContractMapper">
+
+    <resultMap id="BaseResultMap" type="com.jd.springboot02.entity.Contract">
+            <id property="contractId" column="contract_id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+            <result property="businessId" column="business_id" jdbcType="INTEGER"/>
+            <result property="checkStatus" column="check_status" jdbcType="INTEGER"/>
+            <result property="num" column="num" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        contract_id,name,customer_id,
+        business_id,check_status,num,
+        remark,create_time
+    </sql>
+</mapper>
